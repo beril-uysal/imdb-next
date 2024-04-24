@@ -1,5 +1,4 @@
 import Results from "@/components/Results"
-import { Result } from "postcss"
 
 const API_KEY = process.env.API_KEY
 
