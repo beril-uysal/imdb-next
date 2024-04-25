@@ -1,14 +1,12 @@
 import React from 'react'
+import Card from './Card'
 
 export default function Results({results}) {
   return (
-    <div>
+    <div className='sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-6xl mx-auto py-4'>
         {
             results.map((result) => (
-                <div key={result.id}>
-                    <h2>{result.title || result.name}</h2>
-                    <img src={`https://image.tmdb.org/t/p/w500${result.poster_path}`} alt={result.title || result.name}/>
-                </div>
+              <Card key={result.id} result={result}/>
             ))
         }
     </div>
